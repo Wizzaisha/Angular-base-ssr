@@ -22,11 +22,13 @@
   --color-accent-content: #ffffff;
   --color-error: #ea5555;
   --color-error-content: #ffffff;
+
+  --font-sans: "Plus Jakarta Sans";
 }
 
 @plugin "daisyui/theme" {
   name: "dark";
-  default: true;
+  default: false;
   prefersdark: false;
   color-scheme: light;
 
@@ -42,4 +44,6 @@
   --color-accent-content: #ffffff;
   --color-error: #ea5555;
   --color-error-content: #ffffff;
+
+  --font-sans: "Plus Jakarta Sans";
 }

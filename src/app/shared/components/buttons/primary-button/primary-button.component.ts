@@ -10,10 +10,10 @@ import { TooltipModule } from 'primeng/tooltip';
 })
 export class PrimaryButtonComponent {
   @Input() text: string = 'Enviar';
-  @Input() title: string = '';
+  @Input() toolTipText: string = '';
   @Input() type: 'submit' | 'reset' | 'button' = 'button';
   @Input() disabled: boolean = false;
-  @Input() iconName: string | null = null;
+  @Input() iconNamePg: string | null = null;
   @Output() handleClick = new EventEmitter<MouseEvent>();
 
   @Input() showHighlight: boolean = false;

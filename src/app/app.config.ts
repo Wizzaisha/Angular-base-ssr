@@ -10,21 +10,23 @@ import { providePrimeNG } from 'primeng/config';
 import StylePreset from './shared/style-presets/style-preset';
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideClientHydration(withEventReplay()),
+    provideAnimations(),
     providePrimeNG({
-        theme: {
-            preset: StylePreset,
-            options: {
-                darkModeSelector: '.my-app-dark',
-            },
+      theme: {
+        preset: StylePreset,
+        options: {
+          darkModeSelector: '.my-app-dark',
         },
+      },
     }),
     provideStore(),
-    provideEffects()
-],
+    provideEffects(),
+  ],
 };
