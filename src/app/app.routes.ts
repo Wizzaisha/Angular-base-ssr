@@ -4,13 +4,8 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./pages/module1/module1.component').then(
-        (c) => c.Module1Component
+      import('./pages/landing-page/landing-page.component').then(
+        (c) => c.LandingPageComponent
       ),
-  },
-  {
-    path: 'module2',
-    loadChildren: () =>
-      import('./pages/module2/routes/routes').then((r) => r.MODULE2_ROTES),
   },
 ];
